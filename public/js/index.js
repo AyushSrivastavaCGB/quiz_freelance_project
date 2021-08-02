@@ -44,7 +44,7 @@ $(document).ready(function (){
             }
         });
     }
-    
+
 
     $("#start_quiz").click(function () {
         $("#instructions_div").css({"display":"none"});
@@ -152,7 +152,9 @@ $(document).ready(function (){
                         $("#incorrectAns").text(scoreCard.incorrect);
                         $("#result_div").html(
                             `<div class="alert alert-danger">
-                            <strong>Incorrect Answer</strong> <span style="color:green;margin-left:10px">${data.correctAnswer}</span>
+                            <strong>Your Answer - </strong> <span style="color:green;margin-left:10px">${answer}</span>
+                            <br>
+                            <strong>Correct Answer - </strong> <span style="color:green;margin-left:10px">${data.correctAnswer}</span>
                         </div>`
                         );
                         $("#operation_div").html(
